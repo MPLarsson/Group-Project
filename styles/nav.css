@@ -1,0 +1,51 @@
+.navbar-header {
+    background-color: #d8f2b8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 80rem; /* Keeps content centered but header background full-width */
+    margin: 0 auto;
+}
+
+.logo-container {
+    flex-shrink: 0;
+}
+
+.logo-image {
+    height: 3rem; /* Adjusted height for an appropriate size */
+    width: auto;
+}
+
+.nav-links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    list-style-type: none; /* Removes the dots from the list items */
+}
+
+.nav-item {
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    color: black;
+    text-decoration: none; /* Removes the underline from the links */
+    transition-property: color, background-color;
+    transition-duration: 300ms;
+}
+
+.nav-item:hover {
+    color: #4b5563;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item-active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
