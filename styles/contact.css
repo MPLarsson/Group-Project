@@ -103,8 +103,7 @@ body {
 }
 
 .social-icon {
-    width: 2rem;
-    height: 2rem;
+    font-size: 30px;
     color: #4b5563;
     transition: color 0.3s ease;
 }
