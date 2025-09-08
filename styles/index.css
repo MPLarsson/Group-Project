@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #D8F2B8;
+}
+main {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+}
+section {
+    display: inline-block;
+    align-items: center;
+    background-color: #1A1A1A;
+}
+.img {
+    background-color: none;
+    width: 50%;
+    height:50% ;
+}
