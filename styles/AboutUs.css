@@ -3,6 +3,7 @@
     align-items: flex-end;
     justify-content: space-between;
     background-color: #D8F2B8; 
+    font-family: "Lato", sans-serif
 }
 
 
@@ -26,14 +27,14 @@
 .body-text {
     padding: 10px;
     text-align-last: center;
+    font-family: "Lato", sans-serif
     
 } 
 
 h1 {
     font-family: "Montserrat", sans-serif;
-  font-optical-sizing: 52px;
-  font-weight: <52>;
-  font-style: normal;
+    font-weight: bold;
+    font-style: normal;
 }
 
 main {
