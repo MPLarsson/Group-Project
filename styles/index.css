@@ -4,3 +4,32 @@ body {
     background-color: #f0fdf4;
     margin: 0;
 }
+
+.main_section {
+    max-width: 100%;
+    max-height: 100%;
+    height: 250px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+}
+
+.main_container {
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+}
+
+.explore {
+    width: 130px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
