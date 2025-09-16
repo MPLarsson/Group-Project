@@ -3,25 +3,50 @@ body {
     background-color: #f0fdf4;
     margin: 0;
 }
-.container {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-}
-.container .box {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.container .box .column {
-    display: flex;
-    flex-direction: row;
-    width: 32.5%;
-}
 img {
-    width: 300px;
+    width: 15%;
+}
+#img-1 {
+    width: 100%;
+    max-width: 300px;
+}
+#img-2, #img-3 {
+
+}
+.container {
+    background-color: yellow;
+    display: flex;
+    max-height: 10000px;
+    height: 100%;
+}
+.container-left, .container-right {
+    display: block;
+    align-items: center;
+}
+.container-left {
+    background-color: red;
+    margin-left: 50px;
+}
+.container-right {
+    background-color: blueviolet;
+    margin-right: 50px;
+
+}
+.container-left-top {
+    display: flex;
+    justify-content: center;
+}
+.container-left-mid {
+    display: flex;
+    justify-content: center;
+}
+.container-right-top {
+    display: flex;
+    justify-content: center;
+}
+.container-right-mid {
+    justify-content: center;
+}
+.container-right-bot {
+    justify-content: center;
 }
