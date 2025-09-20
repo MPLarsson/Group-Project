@@ -1,4 +1,14 @@
-/* 1. Base Styles & Global Fixes */
+/*
+ * Universal box-sizing reset ensures consistent sizing across all elements
+ * Removes default browser margins and padding for clean slate
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: "Lato", sans-serif;
     background-color: #d8f2b8;
@@ -6,100 +16,135 @@ body {
     color: #1E1E1E;
 }
 
-/*Contact Page Styles */
+/* CONTACT PAGE LAYOUT */
+/* Main contact section container */
 .contact-main {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem; /* Creates space between the two sections */
-    padding: 2rem;
+    margin-top: 1rem;              /* Space from header navigation */
+    display: flex;                 /* Flexbox container */
+    flex-direction: column;        /* Stack vertically */
+    align-items: center;           /* Center items horizontally */
+    justify-content: center;       /* Center items vertically */
+    gap: 2rem;                     /* Space between text and image sections */
+    padding: 2rem;                 /* Internal spacing */
 }
+
 
 @media (min-width: 768px) {
     .contact-main {
-        flex-direction: row;
-        gap: 6rem; /* Increases gap on larger screens */
-        justify-content: center;
+        flex-direction: row;       /* Side-by-side layout */
+        gap: 6rem;                 /* Larger gap for desktop spacing */
+        justify-content: center;   /* Center the two sections */
     }
 }
 
+/* CONTACT TEXT SECTION */
+
 .contact-text-section {
-    max-width: 500px;
-    text-align: center;
+    max-width: 500px;             /* Prevents overly long text lines */
+    text-align: center;           /* Centers all text content */
 }
 
 .contact-title {
-    font-weight: bold;
+    font-weight: bold;            /* Strong emphasis */
     font-size: 1.75rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;          /* Space below title */
     letter-spacing: 5%;
 }
 
 .contact-paragraph {
     font-size: 1rem;
     color: #374151;
-    margin-bottom: 1rem;
+    margin-bottom: 1rem;         /* Space below paragraph */
     line-height: 150%;
 }
 
+/*
+ * Contact information container
+ * Houses email and phone number details
+ */
 .contact-details {
-    margin-top: 2rem;
+    margin-top: 2rem;            /* Separate from paragraph above */
     font-size: 1.125rem;
     font-weight: bold;
 }
 
+/*
+ * Contact information values (email address, phone number)
+ */
 .contact-info {
     font-weight: normal;
+    line-height: 160%;
 }
 
+/*
+ * Primary button
+ * Opens the contact form modal when clicked
+ * Styled as a link but appears as a button
+ */
 .contact-button {
     background-color: #FF3B81;
     color: white;
-    padding: 0.75rem 2rem;
-    border-radius: 11px;
+    padding: 0.75rem 2rem;       /* clickable area */
+    border-radius: 11px;         /* Rounded corners */
     font-weight: bold;
-    margin-top: 2rem;
-    border: none;
+    margin-top: 2rem;            /* Space from content above */
+    border: none;                /* Remove default border */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    text-decoration: none;       /* Remove link underline */
+    display: inline-block;       /* Allow padding on inline element */
 }
 
+/*
+ * Contact button hover state
+ */
 .contact-button:hover {
-    background-color: #e62c72;
+    background-color: #e62c72;   /* Darker pink on hover */
 }
 
+/* CONTACT IMAGE SECTION */
+
+/*
+ * Image styling
+ */
 .contact-image {
-    width: 100%;
-    max-width: 412px;
-    height: auto;
-    border-radius: 36px;
+    width: 100%;                 /* Responsive width */
+    max-width: 412px;            /* Maximum size constraint */
+    height: auto;                /* Maintain aspect ratio */
+    border-radius: 36px;         /* Large rounded corners */
     box-shadow: 0px 2.77px 2.21px 0px rgba(0,0,0,0.05),
                 0px 6.65px 5.32px 0px rgba(0,0,0,0.07),
-                0px 12.52px 10.02px 0px rgba(0,0,0,0.09),
+                0px 12.52px 10.02px 0px rgba(0,0,0,0.09), 
                 0px 22.34px 17.87px 0px rgba(0,0,0,0.11),
                 0px 41.78px 33.42px 0px rgba(0,0,0,0.13),
                 0px 100px 80px 0px rgba(0,0,0,0.18);
 }
 
-/*Social Media Section Styles */
+/* SOCIAL MEDIA SECTION */
+/*
+ * Social media section container
+ * Centers content and provides consistent spacing
+ */
 .social-section {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    text-align: center;          /* Center all content */
+    margin-top: 2rem;            /* Space from main content */
+    margin-bottom: 2rem;         /* Space before footer */
 }
 
 .social-heading {
     font-weight: bold;
     font-size: 1.5rem;
 }
-
+    
+/*
+ * Social media icons container
+ * Flexbox layout for even distribution of icons
+ */
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    display: flex;               /* Flexbox for icon alignment */
+    justify-content: center;     /* Center icons horizontally */
+    gap: 1.5rem;                 /* Space between each icon */
+    margin-top: 1rem;            /* Space below heading */
 }
 
 .social-icon {
@@ -110,4 +155,231 @@ body {
 
 .social-icon:hover {
     color: black;
+}
+
+/* MODAL OVERLAY & CONTAINER */
+/*
+ * Modal overlay backdrop
+ * Full-screen overlay that appears behind the modal form
+ * Hidden by default, shown when :target pseudo-class is active
+ */
+.modal-overlay {
+    display: none;              /* Hidden by default */
+    position: fixed;            /* Fixed positioning for full screen */
+    top: 0;                     /* Align to top of viewport */
+    left: 0;                    /* Align to left of viewport */
+    width: 100%;                /* Full viewport width */
+    height: 100%;               /* Full viewport height */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    z-index: 1000;              /* High z-index to appear above other content */
+    backdrop-filter: blur(4px); /* blur effect behind modal */
+    align-items: center;        /* Center modal vertically */
+    justify-content: center;    /* Center modal horizontally */
+}
+
+/*
+ * Modal target state - activated when URL hash matches modal ID
+ */
+.modal-overlay:target {
+    display: flex;              /* Show modal as flexbox */
+    animation: fadeIn 0.3s ease-out; /* Smooth fade-in animation */
+}
+
+/**
+ * Fade-in animation for modal overlay
+ * Creates smooth entrance effect
+ */
+@keyframes fadeIn {
+    from {
+        opacity: 0;             /* Start invisible */
+    }
+    to {
+        opacity: 1;             /* Fade to fully visible */
+    }
+}
+
+/*
+ * Modal content container
+ * Houses the actual form and provides styling/positioning
+ */
+.modal-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;              /* Internal spacing */
+    width: 90%;
+    max-width: 500px;           /* Maximum width constraint */
+    max-height: 90vh;           /* Maximum height (90% of viewport) */
+    overflow-y: auto;           /* Scroll if content is too tall */
+    position: relative;         /* For positioning close button */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: scale(0.9);      /* Start slightly smaller */
+    animation: slideIn 0.3s ease-out forwards; /* Slide-in animation */
+}
+
+/*
+ * Slide-in animation for modal container
+ */
+@keyframes slideIn {
+    from {
+        transform: scale(0.9);   /* Start at 90% size */
+        opacity: 0;             /* Start invisible */
+    }
+    to {
+        transform: scale(1);     /* End at full size */
+        opacity: 1;             /* End fully visible */
+    }
+}
+
+/*
+ * Modal close button
+ * Positioned in top-right corner with hover effects
+ */
+.modal-close {
+    position: absolute;         /* Absolute positioning within modal */
+    top: 1rem; 
+    right: 1rem;
+    width: 40px;                /* Fixed width for circular shape */
+    height: 40px;               /* Fixed height for circular shape */
+    border: none;               /* Remove default border */
+    background: #f3f4f6;
+    border-radius: 50%;         /* Perfect circle */
+    cursor: pointer;
+    display: flex;              /* Flexbox for centering icon */
+    align-items: center;        /* Center icon vertically */
+    justify-content: center;    /* Center icon horizontally */
+    font-size: 18px;            /* Icon size */
+    color: #6b7280;
+    text-decoration: none;      /* Remove link styling */
+    transition: all 0.2s ease;  /* Smooth hover transitions */
+}
+
+.modal-close:hover {
+    background: #e5e7eb;
+    color: #374151;
+    transform: scale(1.1);
+}
+
+/* MODAL FORM COMPONENTS */
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1E1E1E;
+    margin-bottom: 1.5rem;      /* Space before form fields */
+    text-align: center;         /* Center the title */
+}
+
+/*
+ * Form field group container
+ * Wraps label and input pairs with consistent spacing
+ */
+.form-group {
+    margin-bottom: 1.5rem;      /* Space between form fields */
+}
+
+/*
+ * Form field labels
+ */
+.form-label {
+    display: block;             /* Full width block element */
+    font-weight: 600;           /* Semi-bold for emphasis */
+    color: #374151;
+    margin-bottom: 0.5rem;      /* Space below label */
+    font-size: 0.9rem;
+}
+
+/* FORM INPUT STYLING */
+/*
+ * Base styling for form inputs and textareas
+ * Consistent appearance across all form fields
+ */
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Lato", sans-serif; 
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus transitions */
+    background: white;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none; /* Remove default browser outline */
+    border-color: #FF3B81;
+    box-shadow: 0 0 0 3px rgba(255, 59, 129, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;           /* Allow vertical resize only */
+    min-height: 100px;          /* Minimum height for message field */
+}
+
+/* Form submit button */
+.form-submit {
+    width: 100%;                  /* Full width of container */
+    background-color: #FF3B81;
+    color: white;
+    padding: 0.875rem 1.5rem;   /* padding for touch targets */
+    border: none;               /* Remove default border */
+    border-radius: 11px;        /* Rounded corners to match contact button */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+    margin-top: 1rem;           /* Space from form fields above */
+}
+
+.form-submit:hover {
+    background-color: #e62c72;
+    transform: translateY(-1px);
+}
+
+/*
+ * Submit button active state
+ * Returns to normal position when clicked
+ */
+.form-submit:active {
+    transform: translateY(0);   /* Return to original position */
+}
+
+
+/* FORM VALIDATION STATES */
+/*
+ * Valid input styling
+ * Green border indicates successful validation
+ */
+.form-input:valid {
+    border-color: #10b981;
+}
+
+/*
+ * Invalid input styling (only when not focused and not empty)
+ * Red border indicates validation error
+ * Uses :not pseudo-selectors to avoid showing error on empty focused fields
+ */
+.form-input:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #ef4444; /* Red border for invalid fields */
+}
+
+/*
+ * Required field indicator
+ * Red asterisk to indicate mandatory fields
+ */
+.required {
+    color: #ef4444; /* Red color for required asterisk */
+}
+
+
+@media (max-width: 640px) {
+    .modal-container {
+        margin: 1rem;           /* Smaller margin on mobile */
+        padding: 1.5rem;        /* Reduced padding for more content space */
+    }
+    
+    .form-title {
+        font-size: 1.25rem;     /* Smaller title on mobile screens */
+    }
 }
