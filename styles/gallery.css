@@ -8,7 +8,7 @@ img {
 }
 #img-1 {
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
 }
 #img-2, #img-3 {
 
@@ -16,7 +16,7 @@ img {
 .container {
     background-color: yellow;
     display: flex;
-    max-height: 10000px;
+    max-height: 200vh;
     height: 100%;
 }
 .container-left, .container-right {
