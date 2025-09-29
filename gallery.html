@@ -6,44 +6,50 @@
         <title>Gallery</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+        
         <!-- Link to the separated stylesheet -->
         <link rel="stylesheet" href="/styles/gallery.css">
         <link rel="stylesheet" href="/styles/nav.css">
         <title>Gallery</title>
     </head>
     <body>
-    <!-- Navigation Bar -->
-    <header class="navbar-header">
-        <nav class="navbar-nav">
-            <!-- Logo Section (Left) -->
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="/images/logo.svg" alt="DJ Logo" class="logo-image">
-                </a>
+        <!-- Navigation Bar -->
+        <header class="navbar-header">
+            <nav class="navbar-nav">
+                <!-- Logo Section (Left) -->
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="/images/logo.svg" alt="DJ Logo" class="logo-image">
+                    </a>
+                </div>
+        
+                <!-- Navigation Links (Right) -->
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item">Home</a></li>
+                    <li><a href="about.html" class="nav-item">About Us</a></li>
+                    <li><a href="gallery.html" class="nav-item nav-item-active">Gallery</a></li>
+                    <li><a href="contact.html" class="nav-item">Contact Us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!--Gallery-->
+        <main>
+            <div class="heading"><h2>Gallery</h2>
+                <div class="grid__position">
+                    <div class="grid__container">
+                        <img id="img-1" src="/images/pexels-jacobmorch-426976.jpg" alt="DJ performing at a club">                    <img id="img-2" src="/images/pexels-mediocrememories-2240771.jpg" alt="Two people dancing">
+                        <img id="img-3" src="/images/pexels-mikky-k-158844-625644.jpg" alt="A crowd dancing to the music">
+                        <img id="img-4" src="/images/pexels-paggiarofrancesco-2111016.jpg" alt="DJ mixing on a sound board">
+                        <img id="img-5" src="/images/pexels-wendywei-2350325.jpg" alt="A musician with a synthesizer on a stage">
+                        <img id="img-6" src="/images/pexels-wendywei-1190298.jpg" alt="People with their hands in the air">
+                        <img id="img-7" src="images/pexels-gaby-tenda-1075944-2717073.jpg" alt="Hands on a sound mixer">
+                        <img id="img-8" src="images/pexels-paggiarofrancesco-2111015.jpg" alt="Sound mixer close-up">
+                    </div>
+                </div>
             </div>
-    
-            <!-- Navigation Links (Right) -->
-            <ul class="nav-links">
-                <li><a href="index.html" class="nav-item">Home</a></li>
-                <li><a href="about.html" class="nav-item">About Us</a></li>
-                <li><a href="gallery.html" class="nav-item nav-item-active">Gallery</a></li>
-                <li><a href="contact.html" class="nav-item">Contact Us</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!--Gallery-->
-    <div class="heading"><h2>Gallery</h2>
-        <div class="grid">
-            <img id="img-1" src="/images/pexels-jacobmorch-426976.jpg" alt="DJ performing at a club">
-            <img id="img-2" src="/images/pexels-mediocrememories-2240771.jpg" alt="Two people dancing">
-            <img id="img-3" src="/images/pexels-mikky-k-158844-625644.jpg" alt="A crowd dancing to the music">
-            <img id="img-4" src="/images/pexels-paggiarofrancesco-2111016.jpg" alt="DJ mixing on a sound board">
-            <img id="img-5" src="/images/pexels-wendywei-2350325.jpg" alt="A musician with a synthesizer on a stage">
-            <img id="img-6" src="/images/pexels-wendywei-1190298.jpg" alt="People with their hands in the air">
-            <img id="img-7" src="images/pexels-gaby-tenda-1075944-2717073.jpg" alt="Hands on a sound mixer">
-            <img id="img-8" src="images/pexels-paggiarofrancesco-2111015.jpg" alt="Sound mixer close-up">
-        </div>
-    </div>
-        </body>
+        </main>
+    </body>
 </html>

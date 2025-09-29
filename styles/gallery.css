@@ -4,21 +4,45 @@ body {
     margin: 0;
 }
 
-img {
-    width: 100%;
+main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
 }
 
-.grid {
+h2 {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 56px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.grid__position {
+    max-width: 1110px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.grid__container {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(2, 230px);
+    grid-template-columns: repeat (3, 350px);
+    grid-template-rows: repeat (2, 230px);
     grid-gap: 14px;
-    object-fit: cover;
 }
 
 #img-1 {
     grid-area: 1/1/2/2;
-    width: 100%;
 }
 
 #img-2 {
@@ -38,7 +62,7 @@ img {
 }
 
 #img-6 {
-    grid-area: 2/3/4/4;
+    grid-area: 2/3/3/4;
 }
 
 #img-7 {
@@ -47,4 +71,10 @@ img {
 
 #img-8 {
     grid-area: 3/3/4/4;
+}
+
+.lato-regular {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
