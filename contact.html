@@ -9,10 +9,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     
-    <!-- Link to Font Awesome for social media icons -->
+    <!-- Link to Font Awesome & Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     
     <!-- Link to the separated stylesheet -->
+    <link rel="stylesheet" href="/styles/reset.css">
     <link rel="stylesheet" href="/styles/contact.css">
     <link rel="stylesheet" href="/styles/nav.css">
 </head>
@@ -51,12 +53,52 @@
                 <p>Email: <span class="contact-info">contact@djawesome.com</span></p>
                 <p>Phone: <span class="contact-info">+46 70 111 11 11</span></p>
             </div>
-            <button class="contact-button">Contact Us</button>
+            <a href="#contact-form-modal" class="contact-button">Contact Us</a>
         </div>
         <div class="contact-image-section">
             <img class="contact-image" src="/images/Contact-Page-Img.jpg" alt="DJ Playing Music">
         </div>
     </main>
+
+    <!-- Contact Form Modal -->
+    <div id="contact-form-modal" class="modal-overlay">
+        <div class="modal-container">
+            <a href="#" class="modal-close">
+                <i class="fas fa-times"></i>  <!-- Font Awesome icon that displays the "×" symbol -->
+            </a>
+            
+            <form class="contact-form" action="#" method="POST">
+                <h2 class="form-title">Send us a Message</h2>
+                
+                <div class="form-group">
+                    <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" class="form-input" required placeholder="Enter your full name">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" class="form-input" required placeholder="Enter your email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-input" placeholder="Enter your phone number">
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject" class="form-label">Subject <span class="required">*</span></label>
+                    <input type="text" id="subject" name="subject" class="form-input" required placeholder="What is this regarding?">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message" class="form-label">Message <span class="required">*</span></label>
+                    <textarea id="message" name="message" class="form-textarea" required placeholder="Tell us how we can help you..."></textarea>
+                </div>
+                
+                <button type="submit" class="form-submit">Send Message</button>
+            </form>
+        </div>
+    </div>
 
     <!-- Follow and Engage Section -->
     <section class="social-section">
